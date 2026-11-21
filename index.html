@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Practice a low-pressure career conversation and leave with one action you can take.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'none'; form-action 'none'; base-uri 'none'">
+  <title>Career Next Step</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./scenarios.js"></script>
+  <script defer src="./plan.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <header class="site-header shell">
+    <a class="brand" href="./index.html"><span aria-hidden="true">↗</span> Career Next Step</a>
+    <a class="header-link" href="./pilot/index.html">For facilitators</a>
+  </header>
+  <main class="layout shell">
+    <section class="intro" aria-labelledby="headline">
+      <h1 id="headline">Start with one <em>conversation.</em></h1>
+      <p>Applied to the jobs you’ve found? Practice a small way to connect and leave with one step you can take this week.</p>
+      <div class="illustration" aria-hidden="true"><span class="bubble question">?</span><span class="bubble answer">↗</span></div>
+    </section>
+    <section class="card" aria-label="Career conversation planner">
+      <noscript><p>Enable JavaScript to build your plan, or use the facilitator guide for a paper version.</p></noscript>
+      <ol class="progress" aria-label="Progress" hidden>
+        <li aria-current="step">Choose</li><li>Practice</li><li>Plan</li>
+      </ol>
+      <section id="choose" class="stage" hidden>
+        <h2 tabindex="-1">How would you like to connect?</h2>
+        <p>Pick whatever feels doable today.</p>
+        <div class="choices" id="choices"></div>
+      </section>
+      <form id="practice" class="stage" autocomplete="off" hidden>
+        <h2 tabindex="-1" id="practice-title"></h2>
+        <p id="hint"></p>
+        <label for="draft">What you’ll say</label>
+        <textarea id="draft" aria-describedby="hint" rows="5" maxlength="700" required></textarea>
+        <div class="actions"><button type="button" class="back" data-back="choose">Back</button><button class="primary">Make a plan <span aria-hidden="true">→</span></button></div>
+      </form>
+      <form id="plan" class="stage" autocomplete="off" hidden>
+        <h2 tabindex="-1">Make it doable</h2>
+        <p>Choose one small action and a time that works for you.</p>
+        <label for="action">I will</label>
+        <input id="action" maxlength="160" required>
+        <label for="timing">When</label>
+        <input id="timing" maxlength="100" placeholder="For example, Thursday after class" required>
+        <div class="actions"><button type="button" class="back" data-back="practice">Back</button><button class="primary">See my plan <span aria-hidden="true">→</span></button></div>
+      </form>
+      <section id="result" class="stage" hidden>
+        <h2 tabindex="-1">Your next step</h2>
+        <pre id="summary" tabindex="-1"></pre>
+        <div class="actions export"><button id="copy" class="primary">Copy plan</button><button id="print">Print / save PDF</button></div>
+        <p id="status" role="status"></p>
+        <div class="actions"><button type="button" class="back" data-back="plan">Edit plan</button><button type="button" class="back" id="restart">Start over</button></div>
+      </section>
+    </section>
+  </main>
+  <footer class="shell">No account needed. This tool doesn’t save or send your draft.</footer>
+</body>
+</html>
