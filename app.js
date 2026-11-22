@@ -37,7 +37,8 @@ for (const [key, scenario] of Object.entries(scenarios)) {
     currentScenario = key;
     get('practice-title').textContent = scenario.title;
     get('hint').textContent = scenario.hint;
-    draft.value = saved?.draft ?? scenario.draft;
+    get('example-draft').textContent = scenario.draft;
+    draft.value = saved?.draft ?? '';
     action.value = saved?.action ?? scenario.action;
     timing.value = saved?.timing ?? '';
     [draft, action, timing].forEach(field => field.setCustomValidity(''));
