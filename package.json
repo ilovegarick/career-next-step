@@ -1,0 +1,10 @@
+{
+  "name": "career-next-step",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/plan.test.cjs tests/flow.test.cjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.65.1"
+  }
+}
