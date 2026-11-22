@@ -65,7 +65,7 @@ footer { padding-bottom: 25px; font-size: .85rem; color: var(--muted); }
 }
 @media print {
   body, pre { background: white; color: black; }
-  .site-header, .intro, .progress, footer, .actions, #status, #result h2 { display: none !important; }
+  .site-header, .intro, .progress, footer, .actions, .screen-only, #status, #result h2 { display: none !important; }
   .layout { display: block; width: auto; padding: 0; }
   .card, pre { border: 0; padding: 0; box-shadow: none; }
 }
